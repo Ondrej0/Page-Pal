@@ -1,0 +1,269 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+}
+
+/* Main Card Css ----------------------------------------------------------------------------- */
+
+#mainImage {
+    position: relative; /* Position relative to contain the pseudo-element */
+    height: 150px;
+    background-color: #6200ee;
+    color: white; /* Text color inside the div */
+    padding: 20px; /* Some padding for the content */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
+}
+
+#spanA{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+#spanB{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+}
+
+
+#spanB button {
+    background-color: #ffffff;
+    color: #6200ee;
+    border: 2px solid transparent;
+    padding: 8px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+    /* Hover effect for the button */
+#spanB button:hover {
+    background-color: #6200ee;
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
+
+#mainImage h1{
+    font-size: clamp(25px, 3vw, 40px);
+}
+
+#mainImage h2{
+    font-size: clamp(18px, 2vw, 20px);
+}
+
+#searchInput{
+    width: clamp(300px, 30vw, 600px);
+    height: clamp(30px, 5vw, 30px);
+    border-radius: 20px;
+    border: solid 2px white;
+    padding: 5px;
+}
+
+#searchInput:focus{
+    outline: none;
+    border-color: #b88bf7; /* Change border color when focused */
+    background-color: #ffffff; /* Optional: Change the background color */
+    
+}
+
+#bookList div {
+    margin: 5px auto;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 70%;
+    
+    text-align: center;
+}
+
+
+/*  Add book options----------------------------------------------------------------------------- */
+
+
+.options-container {
+    width: 40%;
+    margin: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #ffffff;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Styling for buttons */
+.options-container button,
+.options-container label {
+    background-color: #6200ee;
+    color: #ffffff;
+    border: 2px solid transparent;
+    padding: 12px 30px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    text-align: center;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    display: block;
+   
+}
+
+/* Hover effect for the buttons */
+.options-container button:hover,
+.options-container label:hover {
+    background-color: #ffffff;
+    color: #6200ee;
+    border-color: #6200ee;
+}
+
+/* Styling for the file input to hide it */
+.options-container label input {
+    display: none;
+}
+
+
+
+/*  Input Div----------------------------------------------------------------------------- */
+
+#inputDiv {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+}
+
+#inputDiv input[type="text"],
+#inputDiv input[type="number"],
+#inputDiv button {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+#inputDiv input[type="text"]:focus,
+#inputDiv input[type="number"]:focus {
+    outline: none;
+    border-color: #6200ee; /* Purple border on focus */
+}
+
+#inputDiv input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(1.2);
+}
+
+#inputDiv label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    color: #666;
+}
+
+#addBookBtn {
+    background-color: #6200ee;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+#addBookBtn:hover {
+    background-color: #3700b3;
+}
+
+/* Center the #inputDiv */
+#inputDiv {
+    position: relative;
+    margin: 0 auto;
+    margin-top: 100px;
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+}
+
+#inputDiv span{
+    display: flex;
+    justify-content: end;
+    width: 105%;
+}
+
+#inputDiv span button{
+    width: 30px;
+    text-align: center;
+    font-size: 10px;
+}
+
+#inputDiv span button:hover{
+    background-color: #6200ee;
+    color: #ffffff;
+    border-color: #ffffff;
+    cursor: pointer;
+}
+
+
+/* Delete btn css ------------------------------------------------------------------------------*/
+
+.deleteBtn{
+    background-color: #ff4d4d; /* Red background */
+    color: white; /* White text */
+    border: none; /* Remove border */
+    padding: 8px 12px; /* Padding for the button */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 14px; /* Font size */
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+.deleteBtn:hover{
+    background-color: #e60000; /* Darker red on hover */
+    
+}
+
+
+.hidden{
+    display: none;
+}
+
+
+
+
+
+#coverContainer {
+    margin-top: 20px;
+}
+#coverImage {
+    max-width: 200px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+}
